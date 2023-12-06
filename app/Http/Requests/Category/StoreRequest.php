@@ -12,8 +12,6 @@ class StoreRequest extends FormRequest
     protected function prepareForValidation()
     {
         $this->merge([
-            // 'slug'=> Str::slug($this->title)
-            // 'slug'=> Str::of($this->title)->slug()->append('-adicional')
             'slug'=> str($this->title)->slug()
         ]);
     }
@@ -23,10 +21,6 @@ class StoreRequest extends FormRequest
         return [
             "title"=>"required|min:5|max:50",
             "slug"=>"unique:posts",
-            "content"=>"required|min:7",
-            "category_id"=>"required|integer",
-            "description"=>"required|min:7",
-            "posted"=>"required",
         ];
     }
 
