@@ -2,7 +2,7 @@
 
 @section('content')
 
-<a href="{{ route('post.create') }}">Crear</a>
+<a href="{{ route('post.create') }}" class="my-3 btn btn-success">Crear</a>
 
 
     <table class="table">
@@ -20,13 +20,13 @@
                 <td scope="row">{{ $p->title }}</td>
                 <td>{{ $p->category->title }}</td>
                 <td>{{ $p->posted }}</td>
-                <td>
-                    <a href="{{ route('post.edit', $p) }}">Editar</a>
-                    <a href="{{ route('post.show', $p) }}">Ver</a>
+                <td class="grid grid-cols-1 gap-2 text-center lg:grid-cols-3">
+                    <a href="{{ route('post.edit', $p) }}" class="btn btn-primary">Editar</a>
+                    <a href="{{ route('post.show', $p) }}" class="btn btn-primary">Ver</a>
                     <form action="{{ route('post.destroy', $p) }}" method="post">
                         @method('DELETE')
                         @csrf
-                    <button type="submit">Eliminar</button></form>
+                    <button type="submit" class="w-full btn btn-danger">Eliminar</button></form>
               
                 </td>
             </tr>

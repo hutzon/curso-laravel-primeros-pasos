@@ -2,10 +2,8 @@
 
 namespace App\Http\Requests\Category;
 
-
-
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Str;
+
 
 class StoreRequest extends FormRequest
 {

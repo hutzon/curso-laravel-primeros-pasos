@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Requests\Category;
-
+namespace App\Http\Requests\Post;
 
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Str;
 
 class StoreRequest extends FormRequest
 {
