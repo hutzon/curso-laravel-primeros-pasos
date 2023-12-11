@@ -27,6 +27,7 @@
 
             <div class="container">
                 <div class="mt-5 card card-white">
+                  
                     @yield('content')
                 </div>
                 
